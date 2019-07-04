@@ -1,2 +1,0 @@
-# protfolio
-portfolio of myself
