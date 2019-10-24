@@ -1,0 +1,233 @@
+/******************************
+General
+******************************/
+.second-page {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: space-between;
+  min-height: 200vh;
+  background-image: url("../images/mobileOne.jpg");
+  background-repeat: no-repeat;
+  background-position: -200px 0px;
+  background-size: 900px 900px;
+  background-attachment: fixed;
+}
+@media (min-width: 64rem) {
+  .second-page {
+    background-position: 0% 0%;
+    background-size: auto;
+    min-height: 100vh;
+  }
+}
+@media (min-width: 40rem) and (max-width: 64rem) {
+  .second-page {
+    background-position: 0% 0%;
+    background-size: auto;
+    min-height: 200vh;
+  }
+}
+
+/******************************
+Navigation
+******************************/
+body {
+  margin: 0;
+  min-width: 360px;
+}
+
+.navigation {
+  background: rgba(236, 230, 230, 0.815);
+  height: 5rem;
+  vertical-align: middle;
+  display: flex;
+}
+.navigation .ham {
+  margin: 1rem 0 1rem 0.7rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media (min-width: 40rem) {
+  .navigation .ham {
+    display: none;
+  }
+}
+.navigation .ham_item {
+  width: 100%;
+  background: black;
+  height: 20%;
+  border-radius: 4.6px;
+}
+.navigation .logo-header {
+  display: inline-block;
+  margin: 1rem 0 1.5rem 0.8rem;
+  font-size: 2.5rem;
+  height: 2.5rem;
+  width: 18rem;
+}
+@media (min-width: 40rem) {
+  .navigation .logo-header {
+    font-size: 2.5vw;
+    position: absolute;
+    left: 3%;
+  }
+}
+
+.menu {
+  background: rgba(206, 198, 198, 0.815);
+  font-size: 1.6rem;
+  margin: -1rem 0;
+  display: none;
+}
+.menu .menu_item:hover {
+  background: rgba(172, 169, 169, 0.815);
+  color: white;
+}
+.menu a {
+  text-decoration: none;
+  padding-left: 1rem;
+  color: black;
+}
+
+.menuBig {
+  display: none;
+}
+@media (min-width: 40rem) {
+  .menuBig {
+    font-size: 1.4vw;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 2%;
+    margin: 2rem 0 0;
+  }
+  .menuBig .menuBig_item:hover {
+    background: rgba(172, 169, 169, 0.815);
+    color: white;
+  }
+  .menuBig a {
+    text-decoration: none;
+    padding-left: 1rem;
+    color: black;
+  }
+}
+
+/******************************
+footer
+******************************/
+footer {
+  background: grey;
+  text-align: center;
+  background: rgba(236, 230, 230, 0.815);
+}
+footer .footer_icon {
+  width: 3rem;
+}
+@media (min-width: 40rem) {
+  footer .footer_icons {
+    display: inline-block;
+    float: left;
+    margin-top: 0.7rem;
+  }
+}
+footer .footer_contact {
+  margin-top: 2vw;
+}
+@media (min-width: 40rem) {
+  footer .footer_contact {
+    display: inline-block;
+    margin-top: 1.3rem;
+    margin-left: 5vw;
+  }
+}
+footer .copyright {
+  margin-left: 10vw;
+  display: inline-block;
+  font-size: 0.6rem;
+  margin-top: 0.7rem;
+}
+
+.menu {
+  margin: -1rem 0;
+}
+
+.second-page {
+  min-height: 100vh;
+}
+
+.gallery {
+  text-align: center;
+}
+.gallery .pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 70vw;
+  border: 3px solid black;
+}
+@media (min-width: 40rem) {
+  .gallery .pic {
+    height: 40vw;
+    width: auto;
+  }
+}
+.gallery .picOne {
+  display: block;
+}
+.gallery .picTwo {
+  display: none;
+}
+.gallery .picThree {
+  display: none;
+}
+.gallery .picFour {
+  display: none;
+}
+.gallery .picFive {
+  display: none;
+}
+.gallery .picSix {
+  display: none;
+}
+.gallery .picSeven {
+  display: none;
+}
+.gallery .picEight {
+  display: none;
+}
+.gallery .picNine {
+  display: none;
+}
+.gallery .picTen {
+  display: none;
+}
+.gallery .picEleven {
+  display: none;
+}
+.gallery .picTwelve {
+  display: none;
+}
+.gallery .navArrow {
+  cursor: pointer;
+  margin-top: -3vh;
+}
+.gallery .navArrow img {
+  background: white;
+  width: 1rem;
+  height: 1rem;
+}
+.gallery .navArrow .arrowLeft {
+  transform: rotate(90deg);
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallery .navArrow .arrowRight {
+  transform: rotate(270deg);
+}
+
+/*# sourceMappingURL=gallery.css.map */

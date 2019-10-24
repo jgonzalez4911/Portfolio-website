@@ -1,0 +1,82 @@
+@import "../template/.template.scss";
+.menu{
+    margin: -1rem 0;
+}
+.second-page{
+    min-height: 100vh;
+    
+}
+.gallery{
+    text-align: center;
+    .pic{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        position:relative;
+        width:70vw;
+        border: 3px solid black;
+        @media(min-width:40rem){
+            height: 40vw;
+            width:auto;
+            
+        }
+    }
+
+    .picOne{
+        display: block;
+    }
+    .picTwo{
+        display:none;
+
+    }
+    .picThree{
+        display:none;
+    }
+    .picFour{
+        display:none;
+    }
+    .picFive{
+        display:none;
+        
+    }
+    .picSix{
+        display:none;
+    }
+    .picSeven{
+        display:none;
+    }
+    .picEight{
+        display:none;
+    }
+    .picNine{
+        display:none;
+    }
+    .picTen{
+        display:none;
+    }
+    .picEleven{
+        display:none;
+    }
+    .picTwelve{
+        display:none;
+    }
+    .navArrow{
+        cursor: pointer;
+        margin-top:-3vh;
+        img{
+            background: white;
+            width:1rem;
+            height:1rem;
+        }
+        .arrowLeft{
+            transform: rotate(90deg);
+            margin-left: auto;
+            margin-right: auto;
+            
+           
+        }
+        .arrowRight{
+            transform: rotate(270deg);
+        }
+    }
+}
