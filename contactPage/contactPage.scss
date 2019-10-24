@@ -1,0 +1,57 @@
+@import "../template/.template.scss";
+.menu{
+    margin: -1rem 0;
+}
+.second-page{
+    min-height: 100vh;
+}
+.contactForm{
+    text-align: center;
+    .name{
+        @media(max-width: 40rem){
+            width:80vw;
+        }
+    }
+    .email{
+        @media(max-width: 40rem){
+            width:80vw;
+        }
+    }
+    .message{
+        height:3rem;
+        @media(max-width: 40rem){
+            width:80vw;
+        }
+        
+    }
+    label{
+        font-size:1.2rem;
+        @media(max-width: 40rem){
+            font-size:2rem;
+        }
+        
+    }
+    .date{
+        @media(max-width: 40rem){
+            width:80vw;
+        }
+    }
+    form{
+
+        background:rgba(236, 230, 230, 0.815);
+        display:inline-block;
+        @media(max-width: 40rem){
+            width:100vw;
+        }
+    }
+   
+}
+
+.contactUs{
+    text-align: center;
+    
+    h1{
+        display:inline-block;
+        background:rgba(236, 230, 230, 0.815);
+    }
+}
