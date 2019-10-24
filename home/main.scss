@@ -1,0 +1,243 @@
+@import "../template/.template.scss";
+/******************************
+General: Banner
+******************************/
+.banner_page{
+    position: absolute;
+    z-index: 5;
+    animation-name: newPage;
+    animation-duration: 1.5s;
+    -webkit-animation-name: newPage;
+    -webkit-animation-duration: 1.5s;
+    animation-play-state: paused;
+    background-image: url("../images/banner.jpg");
+    min-width:100vw;
+    min-height:100vh;
+    background-repeat: no-repeat;
+    background-position: 43% 60%;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: grayscale(40%);
+}
+@keyframes newPage{
+    0%{transform:translate(0,0)}
+    100%{transform:translate(0,-100vh); opacity:1}
+}
+@-webkit-keyframes newPage{
+    0%{transform:translate(0,0)}
+    100%{transform:translate(0,-100vh)}
+
+}
+/******************************
+Start Button and animation
+******************************/
+.start{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size:50px;
+    border-radius: 19.75px;
+    position:absolute;
+    z-index: 6;
+    background: white;
+    border: 5px solid #33ff00;
+    display:inline-block;
+    width:36%;
+    height:39.5;
+    right:32%;
+    top:75%;
+    cursor: pointer;
+    
+    &:active,&:hover{
+        border: 5px solid white;
+        background-color: #33ff00;
+    }
+    animation-name: startButton;
+    animation-duration: 4s;
+    -webkit-animation-name: startButton;
+    -webkit-animation-duration: 1s;
+    
+    a{
+        text-decoration: none;
+       
+    }
+
+}
+@keyframes startButton{
+    0%{transform:translate(0,-24px)}
+}
+@-webkit-keyframes startButton{
+    0%{transform:translate(0,-24px)}
+}
+.name{
+
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    position:absolute;
+    display: inline-block;
+    text-align: center;
+    width:100%;
+    font-size: 70px;
+    margin-top:20px;
+    @media(min-width:40rem){
+        color:black;
+    }
+}
+/******************************
+School logo
+******************************/
+.logo{
+    position:absolute;
+
+    width: 40%;
+    
+    right:30%;
+    top:45%;
+
+    @media (min-width:40rem){
+        top:25%;
+        width:25%;
+        right:37.5%;
+    }
+    
+}
+
+
+/******************************
+Content
+******************************/
+.picture{
+    margin:2rem auto 0 auto;
+    display:inline-block;
+    .profile_pic{
+    width: 14rem;
+    height: auto;
+    border-radius: 100%;
+
+    }
+}
+.quote_box{
+    text-align: center;
+    background: rgba(236, 230, 230, 0.815);
+    font-size: 30px;
+  //margin: 0 auto;
+    quotes: "\201C""\201D""\2018""\2019";
+    padding: 10px 20px;
+    line-height: 1.4;
+    .quote:before{
+        content: open-quote;
+        display: inline;
+      
+        line-height: 0;
+        left: -10px;
+        position: relative;
+        top: 30px;
+        color: #ccc;
+        font-size: 3em;
+    }
+    .quote:after{
+        content: close-quote;
+        display: inline;
+       
+        line-height: 0;
+        left: 10px;
+        position: relative;
+        top: 35px;
+        color: #ccc;
+        font-size: 3em;
+    }
+    
+}
+.icon-code{
+    text-align: center;
+    background: rgba(236, 230, 230, 0.815);
+    
+    // .logos_experience{
+    //     justify-content: space-evenly; 
+    // }
+    h3{
+        font-size: 40px;
+    }
+    .icon{
+        width:49%;
+        display:inline-block;
+        text-align: center;
+        
+    }
+    img{
+        height:5rem;
+        
+    }
+    p{       
+        font-size: 2rem;
+ 
+    }
+   
+    
+    
+
+}
+.bio{
+    text-align: center;
+    background: rgba(236, 230, 230, 0.815);
+}
+/******************************
+Flip Cards
+******************************/
+.flip{
+    text-align: center;
+    
+    vertical-align: middle;
+    .box{
+        cursor: pointer;
+        display: inline-block;
+        background: #33ff00;
+        width: 48vw;
+        height: 48vw;
+        position:relative;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        background-color: transparent;
+        
+        &:active, &:hover{
+          
+            transform: rotateY(0deg);
+           
+        }
+        @media (min-width:66rem){
+            width: 24vw;
+            height:24vw;
+
+        } 
+
+    }
+
+    .front, .back{
+        
+        background: rgb(212, 205, 205);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        p{
+            margin:14vw 0;
+            @media (min-width:66rem){
+                margin:8vw 0;
+            }
+        }
+    }
+    .back{
+        transform: rotateY(180deg);
+        font-size:5vw;
+        @media (min-width:66rem){
+            font-size:1.7vw;
+        }
+    }
+    .front{
+        float:left;
+        font-size:8vw;
+        @media (min-width:66rem){
+            font-size:3vw;
+        }
+    }
+}

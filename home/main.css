@@ -1,0 +1,395 @@
+@charset "UTF-8";
+/******************************
+General
+******************************/
+.second-page {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: space-between;
+  min-height: 200vh;
+  background-image: url("../images/mobileOne.jpg");
+  background-repeat: no-repeat;
+  background-position: -200px 0px;
+  background-size: 900px 900px;
+  background-attachment: fixed;
+}
+@media (min-width: 64rem) {
+  .second-page {
+    background-position: 0% 0%;
+    background-size: auto;
+    min-height: 100vh;
+  }
+}
+@media (min-width: 40rem) and (max-width: 64rem) {
+  .second-page {
+    background-position: 0% 0%;
+    background-size: auto;
+    min-height: 200vh;
+  }
+}
+
+/******************************
+Navigation
+******************************/
+body {
+  margin: 0;
+  min-width: 360px;
+}
+
+.navigation {
+  background: rgba(236, 230, 230, 0.815);
+  height: 5rem;
+  vertical-align: middle;
+  display: flex;
+}
+.navigation .ham {
+  margin: 1rem 0 1rem 0.7rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media (min-width: 40rem) {
+  .navigation .ham {
+    display: none;
+  }
+}
+.navigation .ham_item {
+  width: 100%;
+  background: black;
+  height: 20%;
+  border-radius: 4.6px;
+}
+.navigation .logo-header {
+  display: inline-block;
+  margin: 1rem 0 1.5rem 0.8rem;
+  font-size: 2.5rem;
+  height: 2.5rem;
+  width: 18rem;
+}
+@media (min-width: 40rem) {
+  .navigation .logo-header {
+    font-size: 2.5vw;
+    position: absolute;
+    left: 3%;
+  }
+}
+
+.menu {
+  background: rgba(206, 198, 198, 0.815);
+  font-size: 1.6rem;
+  margin: -1rem 0;
+  display: none;
+}
+.menu .menu_item:hover {
+  background: rgba(172, 169, 169, 0.815);
+  color: white;
+}
+.menu a {
+  text-decoration: none;
+  padding-left: 1rem;
+  color: black;
+}
+
+.menuBig {
+  display: none;
+}
+@media (min-width: 40rem) {
+  .menuBig {
+    font-size: 1.4vw;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 2%;
+    margin: 2rem 0 0;
+  }
+  .menuBig .menuBig_item:hover {
+    background: rgba(172, 169, 169, 0.815);
+    color: white;
+  }
+  .menuBig a {
+    text-decoration: none;
+    padding-left: 1rem;
+    color: black;
+  }
+}
+
+/******************************
+footer
+******************************/
+footer {
+  background: grey;
+  text-align: center;
+  background: rgba(236, 230, 230, 0.815);
+}
+footer .footer_icon {
+  width: 3rem;
+}
+@media (min-width: 40rem) {
+  footer .footer_icons {
+    display: inline-block;
+    float: left;
+    margin-top: 0.7rem;
+  }
+}
+footer .footer_contact {
+  margin-top: 2vw;
+}
+@media (min-width: 40rem) {
+  footer .footer_contact {
+    display: inline-block;
+    margin-top: 1.3rem;
+    margin-left: 5vw;
+  }
+}
+footer .copyright {
+  margin-left: 10vw;
+  display: inline-block;
+  font-size: 0.6rem;
+  margin-top: 0.7rem;
+}
+
+/******************************
+General: Banner
+******************************/
+.banner_page {
+  position: absolute;
+  z-index: 5;
+  animation-name: newPage;
+  animation-duration: 1.5s;
+  -webkit-animation-name: newPage;
+  -webkit-animation-duration: 1.5s;
+  animation-play-state: paused;
+  background-image: url("../images/banner.jpg");
+  min-width: 100vw;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: 43% 60%;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: grayscale(40%);
+}
+
+@keyframes newPage {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100vh);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes newPage {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100vh);
+  }
+}
+/******************************
+Start Button and animation
+******************************/
+.start {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 50px;
+  border-radius: 19.75px;
+  position: absolute;
+  z-index: 6;
+  background: white;
+  border: 5px solid #33ff00;
+  display: inline-block;
+  width: 36%;
+  height: 39.5;
+  right: 32%;
+  top: 75%;
+  cursor: pointer;
+  animation-name: startButton;
+  animation-duration: 4s;
+  -webkit-animation-name: startButton;
+  -webkit-animation-duration: 1s;
+}
+.start:active, .start:hover {
+  border: 5px solid white;
+  background-color: #33ff00;
+}
+.start a {
+  text-decoration: none;
+}
+
+@keyframes startButton {
+  0% {
+    transform: translate(0, -24px);
+  }
+}
+@-webkit-keyframes startButton {
+  0% {
+    transform: translate(0, -24px);
+  }
+}
+.name {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: 70px;
+  margin-top: 20px;
+}
+@media (min-width: 40rem) {
+  .name {
+    color: black;
+  }
+}
+
+/******************************
+School logo
+******************************/
+.logo {
+  position: absolute;
+  width: 40%;
+  right: 30%;
+  top: 45%;
+}
+@media (min-width: 40rem) {
+  .logo {
+    top: 25%;
+    width: 25%;
+    right: 37.5%;
+  }
+}
+
+/******************************
+Content
+******************************/
+.picture {
+  margin: 2rem auto 0 auto;
+  display: inline-block;
+}
+.picture .profile_pic {
+  width: 14rem;
+  height: auto;
+  border-radius: 100%;
+}
+
+.quote_box {
+  text-align: center;
+  background: rgba(236, 230, 230, 0.815);
+  font-size: 30px;
+  quotes: "“" "”" "‘" "’";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+.quote_box .quote:before {
+  content: open-quote;
+  display: inline;
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em;
+}
+.quote_box .quote:after {
+  content: close-quote;
+  display: inline;
+  line-height: 0;
+  left: 10px;
+  position: relative;
+  top: 35px;
+  color: #ccc;
+  font-size: 3em;
+}
+
+.icon-code {
+  text-align: center;
+  background: rgba(236, 230, 230, 0.815);
+}
+.icon-code h3 {
+  font-size: 40px;
+}
+.icon-code .icon {
+  width: 49%;
+  display: inline-block;
+  text-align: center;
+}
+.icon-code img {
+  height: 5rem;
+}
+.icon-code p {
+  font-size: 2rem;
+}
+
+.bio {
+  text-align: center;
+  background: rgba(236, 230, 230, 0.815);
+}
+
+/******************************
+Flip Cards
+******************************/
+.flip {
+  text-align: center;
+  vertical-align: middle;
+}
+.flip .box {
+  cursor: pointer;
+  display: inline-block;
+  background: #33ff00;
+  width: 48vw;
+  height: 48vw;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  background-color: transparent;
+}
+.flip .box:active, .flip .box:hover {
+  transform: rotateY(0deg);
+}
+@media (min-width: 66rem) {
+  .flip .box {
+    width: 24vw;
+    height: 24vw;
+  }
+}
+.flip .front, .flip .back {
+  background: #d4cdcd;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip .front p, .flip .back p {
+  margin: 14vw 0;
+}
+@media (min-width: 66rem) {
+  .flip .front p, .flip .back p {
+    margin: 8vw 0;
+  }
+}
+.flip .back {
+  transform: rotateY(180deg);
+  font-size: 5vw;
+}
+@media (min-width: 66rem) {
+  .flip .back {
+    font-size: 1.7vw;
+  }
+}
+.flip .front {
+  float: left;
+  font-size: 8vw;
+}
+@media (min-width: 66rem) {
+  .flip .front {
+    font-size: 3vw;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
